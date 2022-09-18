@@ -31,8 +31,9 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+        var contador=1
         fun guardarEnArchivo(mensaje:String) = try{
-            var archivo = OutputStreamWriter(activity?.openFileOutput("archivo.txt", Context.MODE_PRIVATE))
+            var archivo = OutputStreamWriter(activity?.openFileOutput("paciente"+contador+".txt", Context.MODE_PRIVATE))
             archivo.write(mensaje)
             archivo.flush()
             archivo.close()
