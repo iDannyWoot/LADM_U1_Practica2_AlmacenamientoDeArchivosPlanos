@@ -5,12 +5,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import mx.edu.ittepic.ladm_u1_practica2_almacenamientodearchivosplanos.databinding.FragmentGalleryBinding
 import java.io.BufferedReader
-import java.io.File
 import java.io.InputStreamReader
 
 class GalleryFragment : Fragment() {
@@ -41,6 +39,7 @@ class GalleryFragment : Fragment() {
             }catch (e:Exception){  }
         }
 
+        leerDeArchivo("archivo.txt")
         var arrayDatos = datosPaciente.split("|")
 
         var vector = ArrayList<String>()
