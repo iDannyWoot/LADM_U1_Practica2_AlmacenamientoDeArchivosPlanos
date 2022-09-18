@@ -46,8 +46,9 @@ class HomeFragment : Fragment() {
             var mensaje = ""
 
             for(i in datosPaciente){
-                mensaje = mensaje + i.toString() + " | "
+                mensaje = mensaje + i.toString() + ", "
             }
+            mensaje += " | "
 
             guardarEnArchivo(mensaje)
         }
