@@ -31,10 +31,6 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        binding.insertar.setOnClickListener {
-
-        }
-
         fun guardarEnArchivo(mensaje:String) = try{
             var archivo = OutputStreamWriter(activity?.openFileOutput("archivo.txt", Context.MODE_PRIVATE))
             archivo.write(mensaje)
@@ -42,6 +38,18 @@ class HomeFragment : Fragment() {
             archivo.close()
         }catch(e:Exception){
             Toast.makeText(requireActivity(),e.message, Toast.LENGTH_LONG)
+        }
+
+        binding.insertar.setOnClickListener {
+            var datosPaciente = arrayOf(binding.nombrecompleto.text, binding.edad.text,
+                binding.direccion.text, binding.ocupacion.text, binding.telefono.text)
+            var mensaje = ""
+
+            for(i in datosPaciente){
+                mensaje = mensaje + i.toString() + " | "
+            }
+
+            guardarEnArchivo(mensaje)
         }
 
         return root
