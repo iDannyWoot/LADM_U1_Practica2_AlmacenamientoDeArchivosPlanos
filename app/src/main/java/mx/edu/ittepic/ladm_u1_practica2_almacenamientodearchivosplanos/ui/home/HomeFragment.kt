@@ -41,8 +41,8 @@ class HomeFragment : Fragment() {
         }
 
         binding.insertar.setOnClickListener {
-            var datosPaciente = arrayOf(binding.nombrecompleto.text, binding.edad.text,
-                binding.direccion.text, binding.ocupacion.text, binding.telefono.text)
+            var datosPaciente = arrayOf("Nombre del Paciente: "+binding.nombrecompleto.text,"Edad:" + binding.edad.text,
+                "Dirección: " + binding.direccion.text, "Ocupación: " + binding.ocupacion.text,"Teléfono: " + binding.telefono.text)
             var mensaje = ""
 
             for(i in datosPaciente){
