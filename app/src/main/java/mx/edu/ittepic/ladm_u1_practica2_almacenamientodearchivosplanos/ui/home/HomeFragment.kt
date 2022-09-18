@@ -46,7 +46,9 @@ class HomeFragment : Fragment() {
             var mensaje = ""
 
             for(i in datosPaciente){
-                mensaje = mensaje + i.toString() + ", "
+                if (!i.startsWith("Teléfono: ")) {
+                    mensaje = mensaje + i.toString() + ", "
+                }
             }
             mensaje += " | "
 
