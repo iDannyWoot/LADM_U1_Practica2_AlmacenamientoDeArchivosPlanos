@@ -100,24 +100,17 @@
         android:text="Insertar"
         android:id="@+id/insertar"
         android:layout_below="@id/etiqueta5"
-        android:layout_marginTop="20dp"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Mostrar"
-        android:id="@+id/mostrar"
-        android:layout_below="@id/etiqueta5"
-        android:layout_toEndOf="@id/insertar"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"/>
+        android:layout_marginLeft="60dp"
+        />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="actualizar"
         android:id="@+id/actualizarr"
         android:layout_below="@id/etiqueta5"
-        android:layout_toEndOf="@+id/mostrar"
+        android:layout_toEndOf="@+id/insertar"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="20dp"/>
 
