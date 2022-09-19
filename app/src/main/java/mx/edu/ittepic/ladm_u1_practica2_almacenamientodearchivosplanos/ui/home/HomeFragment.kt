@@ -16,7 +16,7 @@ import java.io.OutputStreamWriter
 class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
-    private var contador = 1
+    var contador = 1
 
     // This property is only valid between onCreateView and
     // onDestroyView.
@@ -54,10 +54,10 @@ class HomeFragment : Fragment() {
             for(i in datosPaciente){
                 if (!i.startsWith("Teléfono: ")) {
                     //mensaje = mensaje + i + ", " ES IGUAL A LA LÍNEA DE ABAJO
-                    mensaje = "$mensaje$i, "
+                    mensaje = "$mensaje$i\n "
                 }
             }
-            mensaje += " | "
+
 
             guardarEnArchivo(mensaje)
 
